@@ -1,0 +1,30 @@
+# Chef Assistant - Python Dependencies
+# Compatible with Python 3.8+
+
+# Core Dependencies
+numpy>=1.21.0
+Pillow>=9.0.0
+pyyaml>=6.0
+
+# Computer Vision
+opencv-python>=4.5.0  # For camera access and image processing
+
+# Testing
+pytest>=7.0.0
+pytest-cov>=3.0.0
+
+# Optional but recommended
+pytesseract>=0.3.10  # OCR interface (requires tesseract binary)
+
+# Audio processing for continuous voice mode
+pyaudio>=0.2.11  # Real-time audio capture (REQUIRED for voice mode)
+# Note: PyAudio installation may require system dependencies:
+#   - Linux: sudo apt-get install portaudio19-dev
+#   - macOS: brew install portaudio
+#   - Windows: Usually installs via pip without issues
+# Note: The following are NOT Python packages and must be installed separately:
+# - tesseract-ocr (for OCR)
+# - llama.cpp (for Vision LLM)
+# - whisper.cpp (for STT)
+# - piper (for TTS)
+# See installation scripts for platform-specific installation

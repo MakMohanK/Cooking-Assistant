@@ -1,0 +1,20 @@
+# Chef Assistant Configuration
+offline_mode: true
+log_level: INFO
+
+# Model paths (update after downloading models)
+vision_model: ./models/vision/moondream2-q4.gguf
+whisper_model: ./models/stt/ggml-base.en.bin
+piper_voice: ./models/tts/en_US-amy-low.onnx
+
+# OCR settings
+ocr_languages: eng+deva
+
+# Camera settings
+camera_index: 0
+camera_resolution: [640, 480]
+camera_fps: 2
+
+# Audio settings
+sample_rate: 16000
+vad_threshold: 0.5

@@ -1,0 +1,154 @@
+{
+  "name": "Poha",
+  "cuisine": "Indian",
+  "serves": 2,
+  "prep_time_minutes": 10,
+  "cook_time_minutes": 15,
+  "difficulty": "easy",
+  "ingredients": [
+    {
+      "ingredient": "poha",
+      "amount": 2,
+      "unit": "cup",
+      "notes": "flattened rice, rinsed and drained"
+    },
+    {
+      "ingredient": "oil",
+      "amount": 2,
+      "unit": "teaspoon",
+      "notes": "vegetable or peanut oil"
+    },
+    {
+      "ingredient": "mustard_seeds",
+      "amount": 0.5,
+      "unit": "teaspoon",
+      "notes": "rai"
+    },
+    {
+      "ingredient": "cumin",
+      "amount": 0.5,
+      "unit": "teaspoon",
+      "notes": "jeera"
+    },
+    {
+      "ingredient": "onion",
+      "amount": 1,
+      "unit": "count",
+      "notes": "medium, finely chopped"
+    },
+    {
+      "ingredient": "green_chili",
+      "amount": 1,
+      "unit": "count",
+      "notes": "finely chopped"
+    },
+    {
+      "ingredient": "turmeric",
+      "amount": 0.25,
+      "unit": "teaspoon",
+      "notes": "haldi"
+    },
+    {
+      "ingredient": "salt",
+      "amount": 0.5,
+      "unit": "teaspoon",
+      "notes": "adjust to taste"
+    },
+    {
+      "ingredient": "lemon_juice",
+      "amount": 1,
+      "unit": "tablespoon",
+      "notes": "optional, for tanginess"
+    },
+    {
+      "ingredient": "coriander_leaves",
+      "amount": 2,
+      "unit": "tablespoon",
+      "notes": "fresh, chopped (garnish)"
+    }
+  ],
+  "steps": [
+    {
+      "step_number": 1,
+      "instruction": "Rinse 2 cups of poha in cold water until soft. Drain well and set aside.",
+      "duration_seconds": 120,
+      "safety": ["Handle gently to avoid breaking the poha flakes"],
+      "check": null
+    },
+    {
+      "step_number": 2,
+      "instruction": "Heat 2 teaspoons of oil in a pan over medium heat.",
+      "duration_seconds": 60,
+      "safety": ["Caution: hot oil. Keep face and hands at safe distance", "Watch for oil splattering"],
+      "check": {
+        "ingredient": "oil",
+        "amount": 2,
+        "unit": "teaspoon"
+      }
+    },
+    {
+      "step_number": 3,
+      "instruction": "Add half a teaspoon of mustard seeds and half a teaspoon of cumin. Let them crackle for 10 seconds.",
+      "duration_seconds": 15,
+      "safety": ["Seeds may pop and splatter. Step back slightly"],
+      "check": {
+        "ingredient": "mustard_seeds",
+        "amount": 0.5,
+        "unit": "teaspoon"
+      }
+    },
+    {
+      "step_number": 4,
+      "instruction": "Add the chopped onion and green chili. Sauté until onions turn translucent, about 3 minutes.",
+      "duration_seconds": 180,
+      "safety": ["Stir continuously to prevent burning"],
+      "check": {
+        "ingredient": "onion",
+        "amount": 1,
+        "unit": "count"
+      }
+    },
+    {
+      "step_number": 5,
+      "instruction": "Add a quarter teaspoon of turmeric powder and half a teaspoon of salt. Mix well.",
+      "duration_seconds": 20,
+      "safety": [],
+      "check": {
+        "ingredient": "turmeric",
+        "amount": 0.25,
+        "unit": "teaspoon"
+      }
+    },
+    {
+      "step_number": 6,
+      "instruction": "Add the drained poha. Toss gently to mix everything evenly. Cook for 2 minutes.",
+      "duration_seconds": 120,
+      "safety": ["Use gentle folding motion to avoid breaking poha"],
+      "check": {
+        "ingredient": "poha",
+        "amount": 2,
+        "unit": "cup"
+      }
+    },
+    {
+      "step_number": 7,
+      "instruction": "Turn off heat. Add lemon juice if using. Garnish with coriander leaves.",
+      "duration_seconds": 30,
+      "safety": ["Be careful when turning off the stove"],
+      "check": null
+    },
+    {
+      "step_number": 8,
+      "instruction": "Serve hot. Enjoy your poha!",
+      "duration_seconds": 0,
+      "safety": ["Let it cool slightly before eating"],
+      "check": null
+    }
+  ],
+  "tips": [
+    "Don't over-soak the poha or it will become mushy",
+    "Adjust salt and lemon juice to your taste",
+    "Add peanuts for extra crunch",
+    "Serve with yogurt on the side"
+  ]
+}

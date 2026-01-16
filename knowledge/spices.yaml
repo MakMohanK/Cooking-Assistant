@@ -1,0 +1,244 @@
+# Spice Knowledge Base
+# Ingredient aliases, units, substitutions, and tolerance settings
+
+aliases:
+  # Spices and herbs
+  turmeric: [haldi, halad, manjal]
+  cumin: [jeera, jeeragam, zeera]
+  coriander: [dhaniya, dhania, kothamalli]
+  chili_powder: [lal mirch, red chili, chilli powder]
+  mustard_seeds: [rai, mohari, kadugu]
+  salt: [namak, mith, uppu]
+  sugar: [chini, shakkar, sakkara]
+  asafoetida: [hing, perungayam]
+  fenugreek: [methi, menthya, vendhayam]
+  cardamom: [elaichi, elakkai]
+  cinnamon: [dalchini, pattai]
+  cloves: [laung, lavang, krambu]
+  black_pepper: [kali mirch, milagu]
+  garam_masala: [garam masala, warming spice mix]
+  curry_leaves: [kadi patta, kariveppilai]
+  
+  # Common ingredients
+  onion: [pyaaz, kanda, vengayam]
+  garlic: [lahsun, lasun, poondu]
+  ginger: [adrak, allam]
+  tomato: [tamatar, thakkali]
+  oil: [tel, ennai]
+  ghee: [clarified butter, toop]
+  yogurt: [dahi, curd, thayir]
+  lemon: [nimbu, elumichai]
+
+units:
+  # Common cooking units with localized names
+  teaspoon: 
+    abbr: [tsp, चमचा, tea spoon]
+    ml: 5
+  tablespoon:
+    abbr: [tbsp, बड़ा चमच, table spoon]
+    ml: 15
+  cup:
+    abbr: [कप, c]
+    ml: 240
+  pinch:
+    abbr: [चुटकी]
+    grams: 0.5
+  gram:
+    abbr: [g, gm, ग्राम]
+  kilogram:
+    abbr: [kg, किलो]
+  milliliter:
+    abbr: [ml, मिली]
+  liter:
+    abbr: [l, लीटर]
+
+# Ingredient-specific tolerances (absolute or percentage)
+tolerance:
+  # Spices (more forgiving)
+  turmeric:
+    teaspoon: 0.25  # ±0.25 tsp
+    tablespoon: 0.25
+  cumin:
+    teaspoon: 0.25
+    tablespoon: 0.25
+  coriander:
+    teaspoon: 0.25
+    tablespoon: 0.25
+  chili_powder:
+    teaspoon: 0.20  # Less forgiving for heat
+    tablespoon: 0.20
+  
+  # Salt (least forgiving)
+  salt:
+    teaspoon: 0.15  # ±15% or 0.15 tsp
+    tablespoon: 0.15
+    pinch: 0.5
+  
+  # Liquids
+  oil:
+    teaspoon: 0.25
+    tablespoon: 0.25
+    cup: 0.1  # ±10%
+  water:
+    cup: 0.15
+    tablespoon: 0.25
+  
+  # Default for unlisted ingredients
+  __default__:
+    teaspoon: 0.25
+    tablespoon: 0.25
+    cup: 0.1
+    grams: 10
+
+# Substitution rules and balancing suggestions
+substitutions:
+  # When ingredient is over-added
+  turmeric_over: 
+    problem: "Too much turmeric causes bitterness"
+    solutions:
+      - "Balance bitterness with yogurt or cream"
+      - "Add lemon juice or tamarind for tanginess"
+      - "Add a small pinch of sugar to counteract bitterness"
+    
+  salt_over:
+    problem: "Too salty"
+    solutions:
+      - "Add lemon juice to balance salinity"
+      - "Add a pinch of sugar"
+      - "Increase liquid (water/broth) if possible"
+      - "Add more base ingredients (rice, lentils, vegetables)"
+  
+  chili_powder_over:
+    problem: "Too spicy/hot"
+    solutions:
+      - "Add yogurt or cream to reduce heat"
+      - "Add coconut milk for creamy balance"
+      - "Serve with cooling raita or yogurt on side"
+      - "Add potato or tomato to absorb heat"
+  
+  cumin_over:
+    problem: "Overpowering cumin flavor"
+    solutions:
+      - "Balance with coriander powder"
+      - "Add more base ingredients to dilute"
+      - "Increase liquid slightly"
+  
+  garlic_over:
+    problem: "Too much garlic flavor"
+    solutions:
+      - "Add lemon juice to mellow the flavor"
+      - "Increase cooking time to mellow raw taste"
+      - "Balance with cream or coconut milk"
+  
+  # When ingredient is under-added
+  salt_under:
+    problem: "Not salty enough"
+    solutions:
+      - "Add salt gradually in small pinches"
+      - "Taste after each addition"
+      - "Better to under-salt than over-salt"
+  
+  spice_under:
+    problem: "Not enough flavor"
+    solutions:
+      - "Add more of the spice gradually"
+      - "Toast spices briefly to enhance flavor"
+      - "Add complementary spices"
+
+# Common spice combinations (masalas)
+spice_blends:
+  garam_masala:
+    components:
+      - cumin
+      - coriander
+      - cardamom
+      - cinnamon
+      - cloves
+      - black_pepper
+    usage: "Add at end of cooking for aromatic finish"
+  
+  curry_powder:
+    components:
+      - turmeric
+      - coriander
+      - cumin
+      - fenugreek
+      - chili_powder
+    usage: "Add during cooking for base flavor"
+  
+  tadka_spices:
+    components:
+      - mustard_seeds
+      - cumin
+      - curry_leaves
+      - asafoetida
+    usage: "Tempering at start or end of cooking"
+
+# Safety notes for specific ingredients
+safety:
+  asafoetida:
+    - "Use very small amounts (pinch only)"
+    - "Strong smell when raw, mellows when cooked"
+  
+  pressure_cooker:
+    - "Never open under pressure"
+    - "Wait for pressure indicator to drop"
+    - "Keep face away from steam release"
+  
+  hot_oil:
+    - "Stand back when adding ingredients"
+    - "Oil can splatter with moisture"
+    - "Never leave unattended"
+  
+  mustard_seeds:
+    - "Will pop and splatter when heated"
+    - "Cover partially if needed"
+  
+  dried_chilies:
+    - "Can burn quickly - watch carefully"
+    - "Avoid inhaling fumes when cooking"
+
+# Visual identification hints
+visual_cues:
+  turmeric:
+    color: "bright yellow to orange"
+    texture: "fine powder"
+    container: "often in yellow jars/packets"
+  
+  cumin:
+    color: "brown to tan"
+    texture: "seeds or powder"
+    shape: "small elongated seeds if whole"
+  
+  coriander:
+    color: "light brown to beige"
+    texture: "seeds or powder"
+    shape: "round seeds if whole"
+  
+  chili_powder:
+    color: "red to dark red"
+    texture: "fine to medium powder"
+    warning: "can look similar to paprika"
+  
+  salt:
+    color: "white"
+    texture: "fine crystals or powder"
+    note: "can look like sugar - check labels"
+
+# Common measuring errors
+common_errors:
+  - error: "Confusing teaspoon and tablespoon"
+    impact: "3x ingredient amount"
+    prevention: "Check spoon size carefully - tablespoon is bigger"
+  
+  - error: "Heaped vs level measurement"
+    impact: "50-100% more ingredient"
+    prevention: "Level off spoons with knife back for accuracy"
+  
+  - error: "Packed vs loose measurement"
+    impact: "Varies by ingredient"
+    prevention: "Spoon ingredients loosely into measuring tools"
+  
+  - error: "Wet vs dry measuring cups"
+    impact: "Inconsistent measurements"
+    prevention: "Use dry cups for dry ingredients"

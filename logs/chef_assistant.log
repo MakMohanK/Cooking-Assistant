@@ -1,0 +1,94 @@
+2026-01-16 11:41:09,748 - __main__ - INFO - Initializing Chef Assistant...
+2026-01-16 11:41:09,750 - __main__ - ERROR - Fatal error: Model not found: ./models/vision/moondream2-q4.gguf
+Traceback (most recent call last):
+  File "e:\My_Projects\Cooking_Assistant\Cooking_Assistant\chef_assistant.py", line 547, in main
+    assistant = ChefAssistant(config)
+  File "e:\My_Projects\Cooking_Assistant\Cooking_Assistant\chef_assistant.py", line 58, in __init__
+    self._init_modules()
+  File "e:\My_Projects\Cooking_Assistant\Cooking_Assistant\chef_assistant.py", line 77, in _init_modules
+    self.vision = VisionVLM(vision_model)
+  File "e:\My_Projects\Cooking_Assistant\Cooking_Assistant\src\vision_vlm.py", line 45, in __init__
+    raise FileNotFoundError(f"Model not found: {model_path}")
+FileNotFoundError: Model not found: ./models/vision/moondream2-q4.gguf
+2026-01-16 11:41:31,649 - __main__ - INFO - Initializing Chef Assistant...
+2026-01-16 11:41:31,650 - __main__ - ERROR - Fatal error: Model not found: ./models/vision/moondream2-q4.gguf
+Traceback (most recent call last):
+  File "e:\My_Projects\Cooking_Assistant\Cooking_Assistant\chef_assistant.py", line 547, in main
+    assistant = ChefAssistant(config)
+  File "e:\My_Projects\Cooking_Assistant\Cooking_Assistant\chef_assistant.py", line 58, in __init__
+    self._init_modules()
+  File "e:\My_Projects\Cooking_Assistant\Cooking_Assistant\chef_assistant.py", line 77, in _init_modules
+    self.vision = VisionVLM(vision_model)
+  File "e:\My_Projects\Cooking_Assistant\Cooking_Assistant\src\vision_vlm.py", line 45, in __init__
+    raise FileNotFoundError(f"Model not found: {model_path}")
+FileNotFoundError: Model not found: ./models/vision/moondream2-q4.gguf
+2026-01-16 11:42:05,044 - __main__ - INFO - Initializing Chef Assistant...
+2026-01-16 11:42:05,046 - vision_vlm - WARNING - llama.cpp not found - will use mock mode for testing
+2026-01-16 11:42:05,048 - vision_vlm - INFO - Initialized VLM with model: ./models/vision/moondream2-q4.gguf
+2026-01-16 11:42:05,048 - __main__ - INFO - Vision module initialized
+2026-01-16 11:42:05,048 - stt_whisper - INFO - Found whisper.cpp at: whisper.cpp\main
+2026-01-16 11:42:05,048 - stt_whisper - INFO - Initialized Whisper STT with model: ./models/stt/ggml-base.en.bin
+2026-01-16 11:42:05,048 - __main__ - INFO - STT module initialized
+2026-01-16 11:42:05,048 - tts_piper - WARNING - Piper not found - using mock mode
+2026-01-16 11:42:05,048 - tts_piper - INFO - Initialized Piper TTS with model: ./models/tts/en_US-amy-low.onnx
+2026-01-16 11:42:05,048 - __main__ - INFO - TTS module initialized
+2026-01-16 11:42:05,129 - ocr_tesseract - WARNING - Tesseract not found - OCR will be limited
+2026-01-16 11:42:05,129 - ocr_tesseract - INFO - Initialized Tesseract OCR with languages: eng+deva
+2026-01-16 11:42:05,130 - __main__ - INFO - OCR module initialized
+2026-01-16 11:42:05,130 - __main__ - INFO - Quantity estimator initialized
+2026-01-16 11:42:05,130 - __main__ - INFO - Chef Assistant initialized successfully
+2026-01-16 11:42:15,745 - __main__ - INFO - Initializing Chef Assistant...
+2026-01-16 11:42:15,747 - vision_vlm - WARNING - llama.cpp not found - will use mock mode for testing
+2026-01-16 11:42:15,748 - vision_vlm - INFO - Initialized VLM with model: ./models/vision/moondream2-q4.gguf
+2026-01-16 11:42:15,749 - __main__ - INFO - Vision module initialized
+2026-01-16 11:42:15,751 - stt_whisper - INFO - Found whisper.cpp at: whisper.cpp\main
+2026-01-16 11:42:15,751 - stt_whisper - INFO - Initialized Whisper STT with model: ./models/stt/ggml-base.en.bin
+2026-01-16 11:42:15,751 - __main__ - INFO - STT module initialized
+2026-01-16 11:42:15,752 - tts_piper - WARNING - Piper not found - using mock mode
+2026-01-16 11:42:15,753 - tts_piper - INFO - Initialized Piper TTS with model: ./models/tts/en_US-amy-low.onnx
+2026-01-16 11:42:15,753 - __main__ - INFO - TTS module initialized
+2026-01-16 11:42:15,759 - ocr_tesseract - WARNING - Tesseract not found - OCR will be limited
+2026-01-16 11:42:15,759 - ocr_tesseract - INFO - Initialized Tesseract OCR with languages: eng+deva
+2026-01-16 11:42:15,759 - __main__ - INFO - OCR module initialized
+2026-01-16 11:42:15,760 - __main__ - INFO - Quantity estimator initialized
+2026-01-16 11:42:15,760 - __main__ - INFO - Chef Assistant initialized successfully
+2026-01-16 11:48:44,425 - __main__ - INFO - Initializing Chef Assistant...
+2026-01-16 11:48:44,432 - vision_vlm - WARNING - llama.cpp not found - will use mock mode for testing
+2026-01-16 11:48:44,432 - vision_vlm - INFO - Initialized VLM with model: ./models/vision/moondream2-q4.gguf
+2026-01-16 11:48:44,432 - __main__ - INFO - Vision module initialized
+2026-01-16 11:48:44,433 - stt_whisper - INFO - Found whisper.cpp at: whisper.cpp\main
+2026-01-16 11:48:44,434 - stt_whisper - INFO - Initialized Whisper STT with model: ./models/stt/ggml-base.en.bin
+2026-01-16 11:48:44,434 - __main__ - INFO - STT module initialized
+2026-01-16 11:48:44,435 - tts_piper - WARNING - Piper not found - using mock mode
+2026-01-16 11:48:44,435 - tts_piper - INFO - Initialized Piper TTS with model: ./models/tts/en_US-amy-low.onnx
+2026-01-16 11:48:44,435 - __main__ - INFO - TTS module initialized
+2026-01-16 11:48:44,441 - ocr_tesseract - WARNING - Tesseract not found - OCR will be limited
+2026-01-16 11:48:44,442 - ocr_tesseract - INFO - Initialized Tesseract OCR with languages: eng+deva
+2026-01-16 11:48:44,442 - __main__ - INFO - OCR module initialized
+2026-01-16 11:48:44,442 - __main__ - INFO - Quantity estimator initialized
+2026-01-16 11:48:44,442 - __main__ - INFO - Chef Assistant initialized successfully
+2026-01-16 11:48:44,442 - __main__ - INFO - Starting session with recipe: recipes/poha.json
+2026-01-16 11:48:44,443 - recipe_validator - INFO - Initialized validator for recipe: Poha
+2026-01-16 11:48:44,443 - tts_piper - INFO - Speaking: 'Hello! Let's cook Poha together... This recipe ser...'
+2026-01-16 11:48:44,444 - tts_piper - INFO - [MOCK TTS] Would speak: 'Hello! Let's cook Poha together... This recipe serves 2 and has 8 steps... I'll guide you through each step with safety reminders... Say 'next step' when you're ready to begin.'
+2026-01-16 11:48:44,444 - __main__ - INFO - Session started: Poha
+2026-01-16 12:05:09,683 - __main__ - INFO - Initializing Chef Assistant...
+2026-01-16 12:05:09,685 - vision_vlm - WARNING - llama.cpp not found - will use mock mode for testing
+2026-01-16 12:05:09,685 - vision_vlm - INFO - Initialized VLM with model: ./models/vision/moondream2-q4.gguf
+2026-01-16 12:05:09,685 - __main__ - INFO - Vision module initialized
+2026-01-16 12:05:09,685 - stt_whisper - INFO - Found whisper.cpp at: whisper.cpp\main
+2026-01-16 12:05:09,686 - stt_whisper - INFO - Initialized Whisper STT with model: ./models/stt/ggml-base.en.bin
+2026-01-16 12:05:09,686 - __main__ - INFO - STT module initialized
+2026-01-16 12:05:09,687 - tts_piper - WARNING - Piper not found - using mock mode
+2026-01-16 12:05:09,687 - tts_piper - INFO - Initialized Piper TTS with model: ./models/tts/en_US-amy-low.onnx
+2026-01-16 12:05:09,687 - __main__ - INFO - TTS module initialized
+2026-01-16 12:05:09,693 - ocr_tesseract - WARNING - Tesseract not found - OCR will be limited
+2026-01-16 12:05:09,694 - ocr_tesseract - INFO - Initialized Tesseract OCR with languages: eng+deva
+2026-01-16 12:05:09,694 - __main__ - INFO - OCR module initialized
+2026-01-16 12:05:09,694 - __main__ - INFO - Quantity estimator initialized
+2026-01-16 12:05:09,694 - __main__ - INFO - Chef Assistant initialized successfully
+2026-01-16 12:05:09,694 - __main__ - INFO - Starting session with recipe: recipes/poha.json
+2026-01-16 12:05:09,695 - recipe_validator - INFO - Initialized validator for recipe: Poha
+2026-01-16 12:05:09,695 - tts_piper - INFO - Speaking: 'Hello! Let's cook Poha together... This recipe ser...'
+2026-01-16 12:05:09,695 - tts_piper - INFO - [MOCK TTS] Would speak: 'Hello! Let's cook Poha together... This recipe serves 2 and has 8 steps... I'll guide you through each step with safety reminders... Say 'next step' when you're ready to begin.'
+2026-01-16 12:05:09,696 - __main__ - INFO - Session started: Poha

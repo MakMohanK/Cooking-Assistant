@@ -1,0 +1,173 @@
+{
+  "name": "Dal Tadka",
+  "cuisine": "Indian",
+  "serves": 4,
+  "prep_time_minutes": 10,
+  "cook_time_minutes": 30,
+  "difficulty": "easy",
+  "ingredients": [
+    {
+      "ingredient": "toor_dal",
+      "amount": 1,
+      "unit": "cup",
+      "notes": "yellow lentils, washed"
+    },
+    {
+      "ingredient": "water",
+      "amount": 3,
+      "unit": "cup",
+      "notes": "for cooking dal"
+    },
+    {
+      "ingredient": "turmeric",
+      "amount": 0.5,
+      "unit": "teaspoon",
+      "notes": "haldi"
+    },
+    {
+      "ingredient": "salt",
+      "amount": 1,
+      "unit": "teaspoon",
+      "notes": "adjust to taste"
+    },
+    {
+      "ingredient": "ghee",
+      "amount": 2,
+      "unit": "tablespoon",
+      "notes": "or oil"
+    },
+    {
+      "ingredient": "cumin",
+      "amount": 1,
+      "unit": "teaspoon",
+      "notes": "jeera"
+    },
+    {
+      "ingredient": "mustard_seeds",
+      "amount": 0.5,
+      "unit": "teaspoon"
+    },
+    {
+      "ingredient": "garlic",
+      "amount": 4,
+      "unit": "count",
+      "notes": "cloves, minced"
+    },
+    {
+      "ingredient": "red_chili",
+      "amount": 2,
+      "unit": "count",
+      "notes": "dried, whole"
+    },
+    {
+      "ingredient": "asafoetida",
+      "amount": 0.125,
+      "unit": "teaspoon",
+      "notes": "hing, pinch"
+    },
+    {
+      "ingredient": "garam_masala",
+      "amount": 0.5,
+      "unit": "teaspoon"
+    },
+    {
+      "ingredient": "coriander_leaves",
+      "amount": 2,
+      "unit": "tablespoon",
+      "notes": "fresh, chopped"
+    }
+  ],
+  "steps": [
+    {
+      "step_number": 1,
+      "instruction": "In a pressure cooker, add 1 cup washed toor dal, 3 cups water, half teaspoon turmeric, and 1 teaspoon salt.",
+      "duration_seconds": 60,
+      "safety": ["Ensure pressure cooker lid is properly sealed"],
+      "check": {
+        "ingredient": "toor_dal",
+        "amount": 1,
+        "unit": "cup"
+      }
+    },
+    {
+      "step_number": 2,
+      "instruction": "Close the lid and cook on high heat until you hear 3 whistles. Then reduce to low heat for 10 minutes.",
+      "duration_seconds": 900,
+      "safety": ["CRITICAL: Do not open pressure cooker until pressure is fully released", "Keep children and pets away from pressure cooker", "Steam is extremely hot"],
+      "check": null
+    },
+    {
+      "step_number": 3,
+      "instruction": "Turn off heat and let pressure release naturally. This takes about 10 minutes.",
+      "duration_seconds": 600,
+      "safety": ["Do not force open the lid", "Wait for pressure indicator to drop completely"],
+      "check": null
+    },
+    {
+      "step_number": 4,
+      "instruction": "Open the lid carefully. Mash the dal slightly with a whisk. Set aside.",
+      "duration_seconds": 60,
+      "safety": ["Hot steam will escape when opening", "Use oven mitts to handle lid"],
+      "check": null
+    },
+    {
+      "step_number": 5,
+      "instruction": "For tadka: Heat 2 tablespoons ghee in a small pan over medium heat.",
+      "duration_seconds": 45,
+      "safety": ["Caution: hot ghee can splatter"],
+      "check": {
+        "ingredient": "ghee",
+        "amount": 2,
+        "unit": "tablespoon"
+      }
+    },
+    {
+      "step_number": 6,
+      "instruction": "Add 1 teaspoon cumin seeds, half teaspoon mustard seeds, and a pinch of asafoetida. Let them crackle.",
+      "duration_seconds": 15,
+      "safety": ["Seeds will pop - stand back slightly"],
+      "check": {
+        "ingredient": "cumin",
+        "amount": 1,
+        "unit": "teaspoon"
+      }
+    },
+    {
+      "step_number": 7,
+      "instruction": "Add minced garlic and whole red chilies. Sauté until garlic turns golden, about 1 minute.",
+      "duration_seconds": 60,
+      "safety": ["Stir continuously to prevent burning"],
+      "check": null
+    },
+    {
+      "step_number": 8,
+      "instruction": "Add half teaspoon garam masala. Stir for 5 seconds.",
+      "duration_seconds": 10,
+      "safety": [],
+      "check": {
+        "ingredient": "garam_masala",
+        "amount": 0.5,
+        "unit": "teaspoon"
+      }
+    },
+    {
+      "step_number": 9,
+      "instruction": "Pour this hot tadka over the cooked dal. Mix well.",
+      "duration_seconds": 30,
+      "safety": ["Pour carefully to avoid splashing hot oil"],
+      "check": null
+    },
+    {
+      "step_number": 10,
+      "instruction": "Garnish with fresh coriander leaves. Serve hot with rice or roti.",
+      "duration_seconds": 20,
+      "safety": ["Let it cool slightly before eating"],
+      "check": null
+    }
+  ],
+  "tips": [
+    "If dal is too thick, add hot water to adjust consistency",
+    "For extra flavor, add a squeeze of lemon juice before serving",
+    "Can use oil instead of ghee for a vegan version"
+  ]
+}

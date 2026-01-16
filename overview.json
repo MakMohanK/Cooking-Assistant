@@ -1,0 +1,893 @@
+{
+  "rootFolder": "e:\\My_Projects\\Cooking_Assistant\\Cooking-Assistant",
+  "analyzedAt": "2026-01-16T06:49:47.114Z",
+  "rootStructure": [
+    {
+      "name": "BUGFIXES_AND_SETUP.md",
+      "type": "file",
+      "size": 1750,
+      "lines": 60
+    },
+    {
+      "name": "CHANGELOG.md",
+      "type": "file",
+      "size": 6608,
+      "lines": 179
+    },
+    {
+      "name": "chef_assistant.py",
+      "type": "file",
+      "size": 20724,
+      "lines": 571
+    },
+    {
+      "name": "config",
+      "type": "dir"
+    },
+    {
+      "name": "data",
+      "type": "dir"
+    },
+    {
+      "name": "fix_output.txt",
+      "type": "file",
+      "size": 0,
+      "lines": 1
+    },
+    {
+      "name": "fix_windows_paths.py",
+      "type": "file",
+      "size": 4949,
+      "lines": 137
+    },
+    {
+      "name": "install_offline_linux.sh",
+      "type": "file",
+      "size": 7476,
+      "lines": 296
+    },
+    {
+      "name": "install_offline_windows.bat",
+      "type": "file",
+      "size": 6963,
+      "lines": 249
+    },
+    {
+      "name": "knowledge",
+      "type": "dir"
+    },
+    {
+      "name": "LICENSE",
+      "type": "file",
+      "size": 1076,
+      "lines": 22
+    },
+    {
+      "name": "llama.cpp",
+      "type": "dir"
+    },
+    {
+      "name": "logs",
+      "type": "dir"
+    },
+    {
+      "name": "models",
+      "type": "dir"
+    },
+    {
+      "name": "MODELS_DOWNLOAD_GUIDE.md",
+      "type": "file",
+      "size": 938,
+      "lines": 39
+    },
+    {
+      "name": "overview.json",
+      "type": "file",
+      "size": 27720,
+      "lines": 1047
+    },
+    {
+      "name": "overview_architecture.puml",
+      "type": "file",
+      "size": 11361,
+      "lines": 236
+    },
+    {
+      "name": "PROJECT_STATUS.md",
+      "type": "file",
+      "size": 4602,
+      "lines": 171
+    },
+    {
+      "name": "PROJECT_SUMMARY.md",
+      "type": "file",
+      "size": 12788,
+      "lines": 459
+    },
+    {
+      "name": "QUICKSTART.md",
+      "type": "file",
+      "size": 4430,
+      "lines": 188
+    },
+    {
+      "name": "README.md",
+      "type": "file",
+      "size": 9207,
+      "lines": 368
+    },
+    {
+      "name": "recipes",
+      "type": "dir"
+    },
+    {
+      "name": "requirements.txt",
+      "type": "file",
+      "size": 913,
+      "lines": 31
+    },
+    {
+      "name": "REQUIREMENTS_AUDIT.md",
+      "type": "file",
+      "size": 15886,
+      "lines": 386
+    },
+    {
+      "name": "run_chef.bat",
+      "type": "file",
+      "size": 2002,
+      "lines": 70
+    },
+    {
+      "name": "run_chef.sh",
+      "type": "file",
+      "size": 2032,
+      "lines": 74
+    },
+    {
+      "name": "run_simple.py",
+      "type": "file",
+      "size": 3317,
+      "lines": 102
+    },
+    {
+      "name": "scripts",
+      "type": "dir"
+    },
+    {
+      "name": "src",
+      "type": "dir"
+    },
+    {
+      "name": "temp",
+      "type": "dir"
+    },
+    {
+      "name": "tests",
+      "type": "dir"
+    },
+    {
+      "name": "test_run.py",
+      "type": "file",
+      "size": 2779,
+      "lines": 119
+    },
+    {
+      "name": "VOICE_MODE_GUIDE.md",
+      "type": "file",
+      "size": 10371,
+      "lines": 459
+    },
+    {
+      "name": "whisper.cpp",
+      "type": "dir"
+    }
+  ],
+  "rootFileSnippets": {
+    "BUGFIXES_AND_SETUP.md": [
+      "# Bug Fixes and Setup Guide for Chef Assistant",
+      "",
+      "## Critical Issues Identified",
+      "",
+      "### 1. **Disk Space Issue (CRITICAL)**",
+      "- **Problem**: C: drive has only ~63MB free, cannot install opencv-python (39MB)",
+      "- **Solution**: Use temp directory or install to E: drive",
+      "",
+      "### 2. **Missing Dependencies**",
+      "- **Missing**: opencv-python, pyaudio"
+    ],
+    "CHANGELOG.md": [
+      "# Changelog",
+      "",
+      "All notable changes to the Chef Assistant project will be documented in this file.",
+      "",
+      "## [1.1.0] - 2024 - Continuous Voice Loop Implementation",
+      "",
+      "### ✨ Added",
+      "- **Continuous Voice Listening Mode** - Hands-free operation with automatic voice detection",
+      "- Always-on listening with Voice Activity Detection (VAD)",
+      "- Automatic speech segment capture based on silence detection"
+    ],
+    "chef_assistant.py": [
+      "#!/usr/bin/env python3",
+      "# chef_assistant.py",
+      "\"\"\"",
+      "Main Orchestrator for Offline Vision + Voice Chef Assistant",
+      "Coordinates all modules: Vision VLM, STT, TTS, OCR, Quantity Estimation, Recipe Validation",
+      "Designed for visually impaired users with voice-first UX and safety warnings.",
+      "\"\"\"",
+      "",
+      "import os",
+      "import sys"
+    ],
+    "fix_output.txt": [
+      ""
+    ],
+    "fix_windows_paths.py": [
+      "def fix_vision_vlm():",
+      "\"\"\"Fix vision_vlm.py paths.\"\"\"",
+      "file_path = Path(\"src/vision_vlm.py\")",
+      "",
+      "if not file_path.exists():",
+      "print(f\"[ERROR] File not found: {file_path}\")",
+      "return",
+      "",
+      "content = file_path.read_text(encoding='utf-8')",
+      ""
+    ],
+    "install_offline_linux.sh": [
+      "#!/usr/bin/env bash",
+      "# Installation script for Chef Assistant on Linux/Raspberry Pi OS",
+      "# This script sets up all dependencies for offline operation",
+      "",
+      "set -e  # Exit on error",
+      "",
+      "echo \"==========================================\"",
+      "echo \"Chef Assistant - Linux Installation\"",
+      "echo \"==========================================\"",
+      "echo \"\""
+    ],
+    "install_offline_windows.bat": [
+      "@echo off",
+      "REM Installation script for Chef Assistant on Windows",
+      "REM This script sets up all dependencies for offline operation",
+      "",
+      "echo ==========================================",
+      "echo Chef Assistant - Windows Installation",
+      "echo ==========================================",
+      "echo.",
+      "",
+      "REM Check if Python is installed"
+    ],
+    "LICENSE": [
+      "MIT License",
+      "",
+      "Copyright (c) 2024 Chef Assistant Team",
+      "",
+      "Permission is hereby granted, free of charge, to any person obtaining a copy",
+      "of this software and associated documentation files (the \"Software\"), to deal",
+      "in the Software without restriction, including without limitation the rights",
+      "to use, copy, modify, merge, publish, distribute, sublicense, and/or sell",
+      "copies of the Software, and to permit persons to whom the Software is",
+      "furnished to do so, subject to the following conditions:"
+    ],
+    "MODELS_DOWNLOAD_GUIDE.md": [
+      "# Model Download Guide",
+      "",
+      "## Required Models",
+      "",
+      "### 1. Vision Model (Moondream2 or LLaVA)",
+      "Download from Hugging Face:",
+      "- Moondream2: https://huggingface.co/vikhyatk/moondream2",
+      "- LLaVA: https://huggingface.co/mys/ggml_llava-v1.5-7b",
+      "",
+      "Save GGUF file to: models/vision/"
+    ],
+    "overview.json": [
+      "{",
+      "\"rootFolder\": \"e:\\\\My_Projects\\\\Cooking_Assistant\\\\Cooking_Assistant\",",
+      "\"analyzedAt\": \"2026-01-16T06:08:25.779Z\",",
+      "\"rootStructure\": [",
+      "{",
+      "\"name\": \".gitignore\",",
+      "\"type\": \"file\",",
+      "\"size\": 651,",
+      "\"lines\": 61",
+      "},"
+    ],
+    "overview_architecture.puml": [
+      "@startuml",
+      "' Generated by SASVA Maria on 2026-01-16T06:11:20.338Z",
+      "",
+      "!theme plain",
+      "skinparam componentStyle rectangle",
+      "skinparam backgroundColor #FAFAFA",
+      "skinparam packageBackgroundColor #F5F5F5",
+      "skinparam componentBackgroundColor #FFFFFF",
+      "skinparam databaseBackgroundColor #E8F5E9",
+      "skinparam noteBackgroundColor #FFF3E0"
+    ],
+    "PROJECT_STATUS.md": [
+      "# 🎉 Chef Assistant - Project Status",
+      "",
+      "## ✅ PROJECT SUCCESSFULLY RUNNING",
+      "",
+      "### Installation Summary",
+      "",
+      "**Date**: January 16, 2026",
+      "**Status**: ✅ All core dependencies installed and working",
+      "**Location**: `E:\\My_Projects\\Cooking_Assistant\\Cooking_Assistant`",
+      ""
+    ],
+    "PROJECT_SUMMARY.md": [
+      "# 🍳 Chef Assistant - Project Summary",
+      "",
+      "## ✅ Project Status: COMPLETE",
+      "",
+      "A fully functional offline vision + voice cooking assistant for visually impaired users, compatible with both **Windows** and **Raspberry Pi OS**.",
+      "",
+      "---",
+      "",
+      "## 📦 What Has Been Delivered",
+      ""
+    ],
+    "QUICKSTART.md": [
+      "# 🚀 Chef Assistant - Quick Start Guide",
+      "",
+      "Get up and running with the Chef Assistant in 5 minutes!",
+      "",
+      "## Prerequisites",
+      "",
+      "- **Raspberry Pi**: Pi 4/5 with 8GB RAM, or any Linux system",
+      "- **Windows**: Windows 10/11 with 8GB+ RAM",
+      "- **Python**: 3.8 or higher",
+      "- **Camera**: USB webcam"
+    ],
+    "README.md": [
+      "# 🍳 Offline Vision + Voice Chef Assistant",
+      "",
+      "A privacy-preserving, offline cooking assistant designed for visually impaired users. Runs entirely on Raspberry Pi (or Windows) with **no internet connection** required during operation. Features **continuous voice listening** for truly hands-free cooking.",
+      "",
+      "## 🎯 Key Features",
+      "",
+      "- **🎤 Continuous Voice Mode** - Hands-free operation with automatic voice detection (NEW!)",
+      "- **👁️ Live Ingredient Recognition** - Identify spices and ingredients with spatial guidance",
+      "- **📏 Quantity Detection** - Detect teaspoons, tablespoons, cups, grams using visual analysis",
+      "- **✅ Recipe Adherence** - Track what's added, compare against recipe, suggest corrections"
+    ],
+    "requirements.txt": [
+      "# Chef Assistant - Python Dependencies",
+      "# Compatible with Python 3.8+",
+      "",
+      "# Core Dependencies",
+      "numpy>=1.21.0",
+      "Pillow>=9.0.0",
+      "pyyaml>=6.0",
+      "",
+      "# Computer Vision",
+      "opencv-python>=4.5.0  # For camera access and image processing"
+    ],
+    "REQUIREMENTS_AUDIT.md": [
+      "# 📋 Requirements Audit - Chef Assistant Project",
+      "",
+      "## Comprehensive Requirements Check",
+      "",
+      "---",
+      "",
+      "## ✅ PRIMARY OBJECTIVES - STATUS",
+      "",
+      "### 1. Live Ingredient/Spice Recognition with Spatial Guidance and Label OCR",
+      ""
+    ],
+    "run_chef.bat": [
+      "@echo off",
+      "REM Run script for Chef Assistant on Windows",
+      "",
+      "REM Activate virtual environment",
+      "if exist \"chef_venv\\Scripts\\activate.bat\" (",
+      "call chef_venv\\Scripts\\activate.bat",
+      ") else (",
+      "echo Error: Virtual environment not found. Run install_offline_windows.bat first.",
+      "pause",
+      "exit /b 1"
+    ],
+    "run_chef.sh": [
+      "#!/usr/bin/env bash",
+      "# Run script for Chef Assistant on Linux/Raspberry Pi OS",
+      "",
+      "set -euo pipefail",
+      "",
+      "# Activate virtual environment",
+      "if [ -d \"chef_venv\" ]; then",
+      "source chef_venv/bin/activate",
+      "else",
+      "echo \"Error: Virtual environment not found. Run install_offline_linux.sh first.\""
+    ],
+    "run_simple.py": [
+      "#!/usr/bin/env python3",
+      "# -*- coding: utf-8 -*-",
+      "\"\"\"",
+      "Simple launcher for Chef Assistant - runs in mock mode for testing",
+      "\"\"\"",
+      "import sys",
+      "import logging",
+      "from pathlib import Path",
+      "",
+      "# Setup logging"
+    ],
+    "test_run.py": [
+      "#!/usr/bin/env python3",
+      "# -*- coding: utf-8 -*-",
+      "\"\"\"",
+      "Simple test to verify Chef Assistant can initialize and run in mock mode",
+      "\"\"\"",
+      "import sys",
+      "from pathlib import Path",
+      "",
+      "# Add src to path",
+      "sys.path.insert(0, str(Path(__file__).parent / \"src\"))"
+    ],
+    "VOICE_MODE_GUIDE.md": [
+      "# 🎤 Voice Mode Guide - Continuous Voice Listening",
+      "",
+      "## Overview",
+      "",
+      "The Chef Assistant now supports **continuous voice listening mode** with Voice Activity Detection (VAD). This allows hands-free operation - just speak naturally and the assistant will listen, transcribe, and respond automatically.",
+      "",
+      "---",
+      "",
+      "## ✨ Features",
+      ""
+    ]
+  },
+  "importantFolders": [
+    {
+      "path": "config",
+      "category": "config",
+      "fileCount": 1
+    },
+    {
+      "path": "data\\calibration",
+      "category": "core",
+      "fileCount": 0
+    },
+    {
+      "path": "scripts",
+      "category": "scripts",
+      "fileCount": 4,
+      "primaryLanguage": "Python"
+    },
+    {
+      "path": "tests",
+      "category": "tests",
+      "fileCount": 3,
+      "primaryLanguage": "Python"
+    }
+  ],
+  "readmeParagraphs": {
+    "root": "# 🍳 Offline Vision + Voice Chef Assistant"
+  },
+  "totals": {
+    "numFiles": 105,
+    "numDirs": 21,
+    "totalSizeBytes": 5984522568,
+    "totalLinesOfCode": 4917
+  },
+  "fileCategories": {
+    "documentation": 11,
+    "source": 22,
+    "config": 6,
+    "other": 64,
+    "test": 2
+  },
+  "linesOfCodePerLanguage": {
+    "Python": 4228,
+    "Shell": 370,
+    "Batch": 319
+  },
+  "filesPerLanguage": {
+    "Python": 18,
+    "Shell": 2,
+    "Batch": 2
+  },
+  "projectTypes": [
+    "Python (requirements)"
+  ],
+  "frameworks": [],
+  "entryPoints": [
+    "chef_assistant.py",
+    "install_offline_linux.sh",
+    "run_chef.sh",
+    "run_simple.py",
+    "scripts\\calibrate.py",
+    "scripts\\download_models.py",
+    "scripts\\verify_models.py",
+    "test_run.py"
+  ],
+  "ciCdTools": [],
+  "packageManagers": [
+    "pip"
+  ],
+  "topLevelDirectories": [
+    {
+      "name": "src",
+      "numFiles": 7,
+      "totalLoc": 1848,
+      "dominantLanguage": "Python"
+    },
+    {
+      "name": "scripts",
+      "numFiles": 4,
+      "totalLoc": 957,
+      "dominantLanguage": "Python"
+    },
+    {
+      "name": "tests",
+      "numFiles": 3,
+      "totalLoc": 494,
+      "dominantLanguage": "Python"
+    },
+    {
+      "name": "config",
+      "numFiles": 1,
+      "totalLoc": 0
+    },
+    {
+      "name": "knowledge",
+      "numFiles": 1,
+      "totalLoc": 0
+    },
+    {
+      "name": "llama.cpp",
+      "numFiles": 38,
+      "totalLoc": 0
+    },
+    {
+      "name": "logs",
+      "numFiles": 1,
+      "totalLoc": 0
+    },
+    {
+      "name": "models",
+      "numFiles": 4,
+      "totalLoc": 0
+    },
+    {
+      "name": "recipes",
+      "numFiles": 2,
+      "totalLoc": 0
+    },
+    {
+      "name": "whisper.cpp",
+      "numFiles": 21,
+      "totalLoc": 0
+    }
+  ],
+  "detailedDirectories": [
+    {
+      "path": "src",
+      "name": "src",
+      "level": 1,
+      "numFiles": 7,
+      "totalLoc": 1848,
+      "dominantLanguage": "Python",
+      "category": "General",
+      "description": "General module with 7 files (Python)",
+      "subdirectories": []
+    },
+    {
+      "path": "scripts",
+      "name": "scripts",
+      "level": 1,
+      "numFiles": 4,
+      "totalLoc": 957,
+      "dominantLanguage": "Python",
+      "category": "Tools/Scripts",
+      "description": "Tools/Scripts module with 4 files (Python)",
+      "subdirectories": []
+    },
+    {
+      "path": "tests",
+      "name": "tests",
+      "level": 1,
+      "numFiles": 3,
+      "totalLoc": 494,
+      "dominantLanguage": "Python",
+      "category": "Testing",
+      "description": "Testing module with 3 files (Python)",
+      "subdirectories": []
+    },
+    {
+      "path": "llama.cpp",
+      "name": "llama.cpp",
+      "level": 1,
+      "numFiles": 38,
+      "totalLoc": 0,
+      "category": "General",
+      "description": "General module with 38 files",
+      "subdirectories": []
+    },
+    {
+      "path": "whisper.cpp",
+      "name": "whisper.cpp",
+      "level": 1,
+      "numFiles": 21,
+      "totalLoc": 0,
+      "category": "General",
+      "description": "General module with 21 files",
+      "subdirectories": [
+        {
+          "path": "whisper.cpp\\main",
+          "name": "main",
+          "level": 2,
+          "numFiles": 21,
+          "totalLoc": 0,
+          "category": "General",
+          "description": "General module with 21 files",
+          "subdirectories": []
+        }
+      ]
+    },
+    {
+      "path": "models",
+      "name": "models",
+      "level": 1,
+      "numFiles": 4,
+      "totalLoc": 0,
+      "category": "Models/Entities",
+      "description": "Models/Entities module with 4 files",
+      "subdirectories": [
+        {
+          "path": "models\\tts",
+          "name": "tts",
+          "level": 2,
+          "numFiles": 2,
+          "totalLoc": 0,
+          "category": "General",
+          "description": "General module with 2 files",
+          "subdirectories": []
+        },
+        {
+          "path": "models\\stt",
+          "name": "stt",
+          "level": 2,
+          "numFiles": 1,
+          "totalLoc": 0,
+          "category": "General",
+          "description": "General module with 1 files",
+          "subdirectories": []
+        },
+        {
+          "path": "models\\vision",
+          "name": "vision",
+          "level": 2,
+          "numFiles": 1,
+          "totalLoc": 0,
+          "category": "General",
+          "description": "General module with 1 files",
+          "subdirectories": []
+        }
+      ]
+    },
+    {
+      "path": "recipes",
+      "name": "recipes",
+      "level": 1,
+      "numFiles": 2,
+      "totalLoc": 0,
+      "category": "General",
+      "description": "General module with 2 files",
+      "subdirectories": []
+    },
+    {
+      "path": "config",
+      "name": "config",
+      "level": 1,
+      "numFiles": 1,
+      "totalLoc": 0,
+      "category": "Configuration",
+      "description": "Configuration module with 1 files",
+      "subdirectories": []
+    },
+    {
+      "path": "knowledge",
+      "name": "knowledge",
+      "level": 1,
+      "numFiles": 1,
+      "totalLoc": 0,
+      "category": "General",
+      "description": "General module with 1 files",
+      "subdirectories": []
+    },
+    {
+      "path": "logs",
+      "name": "logs",
+      "level": 1,
+      "numFiles": 1,
+      "totalLoc": 0,
+      "category": "General",
+      "description": "General module with 1 files",
+      "subdirectories": []
+    }
+  ],
+  "architecturalInsights": {
+    "coreApplications": [],
+    "entryPointDetails": [
+      {
+        "path": "..\\..\\..\\Microsoft VS Code\\chef_assistant.py",
+        "type": "Unknown",
+        "description": ""
+      },
+      {
+        "path": "..\\..\\..\\Microsoft VS Code\\install_offline_linux.sh",
+        "type": "Unknown",
+        "description": ""
+      },
+      {
+        "path": "..\\..\\..\\Microsoft VS Code\\run_chef.sh",
+        "type": "Unknown",
+        "description": ""
+      },
+      {
+        "path": "..\\..\\..\\Microsoft VS Code\\run_simple.py",
+        "type": "Unknown",
+        "description": ""
+      },
+      {
+        "path": "..\\..\\..\\Microsoft VS Code\\scripts\\calibrate.py",
+        "type": "Unknown",
+        "description": ""
+      },
+      {
+        "path": "..\\..\\..\\Microsoft VS Code\\scripts\\download_models.py",
+        "type": "Unknown",
+        "description": ""
+      },
+      {
+        "path": "..\\..\\..\\Microsoft VS Code\\scripts\\verify_models.py",
+        "type": "Unknown",
+        "description": ""
+      },
+      {
+        "path": "..\\..\\..\\Microsoft VS Code\\test_run.py",
+        "type": "Unknown",
+        "description": ""
+      }
+    ],
+    "serviceArchitecture": {
+      "microservices": [],
+      "monoliths": [],
+      "libraries": []
+    },
+    "layeredArchitecture": {
+      "presentation": [],
+      "business": [],
+      "data": [],
+      "infrastructure": []
+    }
+  },
+  "largeFiles": [
+    {
+      "path": "models\\vision\\moondream2-q4.gguf",
+      "sizeMb": 2707.99
+    },
+    {
+      "path": "models\\vision\\moondream2-text-model-f16.gguf",
+      "sizeMb": 2707.99
+    },
+    {
+      "path": "models\\stt\\ggml-base.en.bin",
+      "sizeMb": 141.11
+    },
+    {
+      "path": "models\\tts\\en_US-amy-low.onnx",
+      "sizeMb": 60.18
+    },
+    {
+      "path": "llama.cpp\\llama-server.exe",
+      "sizeMb": 9.22
+    },
+    {
+      "path": "llama.cpp\\llama-cli.exe",
+      "sizeMb": 7.64
+    },
+    {
+      "path": "llama.cpp\\llama-perplexity.exe",
+      "sizeMb": 6.27
+    },
+    {
+      "path": "llama.cpp\\llama-tts.exe",
+      "sizeMb": 6.25
+    },
+    {
+      "path": "llama.cpp\\llama-imatrix.exe",
+      "sizeMb": 6.23
+    },
+    {
+      "path": "llama.cpp\\llama-completion.exe",
+      "sizeMb": 6.17
+    },
+    {
+      "path": "llama.cpp\\llama-mtmd-cli.exe",
+      "sizeMb": 6.16
+    },
+    {
+      "path": "llama.cpp\\llama-batched-bench.exe",
+      "sizeMb": 6.15
+    },
+    {
+      "path": "llama.cpp\\llama-fit-params.exe",
+      "sizeMb": 6.14
+    },
+    {
+      "path": "llama.cpp\\llama.dll",
+      "sizeMb": 2.46
+    },
+    {
+      "path": "whisper.cpp\\main\\SDL2.dll",
+      "sizeMb": 2.38
+    },
+    {
+      "path": "whisper.cpp\\main\\whisper-talk-llama.exe",
+      "sizeMb": 1.79
+    },
+    {
+      "path": "llama.cpp\\ggml-cpu-sapphirerapids.dll",
+      "sizeMb": 1.42
+    },
+    {
+      "path": "llama.cpp\\ggml-cpu-cannonlake.dll",
+      "sizeMb": 1.18
+    },
+    {
+      "path": "llama.cpp\\ggml-cpu-cascadelake.dll",
+      "sizeMb": 1.17
+    },
+    {
+      "path": "llama.cpp\\ggml-cpu-cooperlake.dll",
+      "sizeMb": 1.17
+    },
+    {
+      "path": "llama.cpp\\ggml-cpu-icelake.dll",
+      "sizeMb": 1.17
+    },
+    {
+      "path": "llama.cpp\\ggml-cpu-skylakex.dll",
+      "sizeMb": 1.17
+    },
+    {
+      "path": "llama.cpp\\ggml-cpu-zen4.dll",
+      "sizeMb": 1.17
+    }
+  ],
+  "dependencies": {
+    "production": [
+      "numpy",
+      "Pillow",
+      "pyyaml",
+      "opencv-python",
+      "pytest",
+      "pytest-cov",
+      "pytesseract",
+      "pyaudio"
+    ],
+    "development": [],
+    "total": 8
+  },
+  "complexity": {
+    "averageFileSize": 46.82857142857143,
+    "maxFileSize": 28395333.2224,
+    "nestedDepth": 0,
+    "estimatedComplexity": "medium"
+  },
+  "gitRepo": {
+    "firstCommitDate": "2026-01-16",
+    "totalCommits": 1,
+    "numContributors": 0,
+    "currentBranch": "main",
+    "remoteUrls": [
+      "https://github.com/MakMohanK/Cooking-Assistant.git"
+    ]
+  },
+  "license": "MIT"
+}
